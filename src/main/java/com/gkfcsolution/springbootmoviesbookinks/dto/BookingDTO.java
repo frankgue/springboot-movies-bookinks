@@ -1,9 +1,13 @@
 package com.gkfcsolution.springbootmoviesbookinks.dto;
 
+import com.gkfcsolution.springbootmoviesbookinks.model.BookingStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * Created on 2025 at 17:51
@@ -19,4 +23,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class BookingDTO {
+    private Long id;
+    private Integer numberOfSeats;
+    private LocalDateTime bookingTime;
+    private Double price;
+    private BookingStatus bookingStatus;
+    private List<String> seatNumbers;
+    private Long userId;
+    private Long showId;
 }
