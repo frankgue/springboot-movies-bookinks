@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 /**
  * Created on 2025 at 17:52
  * File: null.java
@@ -19,4 +21,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class UserDTO {
+
+    private String username;
+    private String email;
+    private Set<String> roles;
 }

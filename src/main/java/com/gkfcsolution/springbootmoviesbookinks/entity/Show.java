@@ -1,5 +1,6 @@
 package com.gkfcsolution.springbootmoviesbookinks.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,6 +26,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table(name = "shows")
 public class Show {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,6 +42,7 @@ public class Show {
     @JoinColumn(name = "theater_id", nullable = false)
     private Theater theater;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "show", fetch = FetchType.LAZY)
     private List<Booking> bookings = new ArrayList<>();
 }

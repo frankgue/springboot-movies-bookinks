@@ -21,7 +21,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class ShowDTO {
-    private Long id;
     private LocalDateTime showTime;
     private Double price;
     private Long movieId;

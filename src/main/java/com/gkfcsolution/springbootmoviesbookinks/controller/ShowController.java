@@ -3,7 +3,6 @@ package com.gkfcsolution.springbootmoviesbookinks.controller;
 import com.gkfcsolution.springbootmoviesbookinks.dto.ShowDTO;
 import com.gkfcsolution.springbootmoviesbookinks.entity.Show;
 import com.gkfcsolution.springbootmoviesbookinks.service.ShowService;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -30,6 +29,7 @@ public class ShowController {
 
     @PostMapping("/createshow")
     public ResponseEntity<Show> createShow(@RequestBody ShowDTO showDTO){
+        log.info("Received request to create show: {}", showDTO);
         return new ResponseEntity<>(showService.createShow(showDTO), HttpStatus.CREATED);
     }
 

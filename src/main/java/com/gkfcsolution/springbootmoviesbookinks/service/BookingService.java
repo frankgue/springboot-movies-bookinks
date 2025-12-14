@@ -23,4 +23,5 @@ public interface BookingService {
     Booking confirmBooking( Long bookingId);
     Booking cancelBooking( Long bookingId);
     List<Booking> getBookingsByStatus(String bookingStatus);
+    List<Booking> getAllBookings();
 }

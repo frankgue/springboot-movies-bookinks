@@ -19,7 +19,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class TheaterDTO {
-    private Long id;
     private String theaterName;
     private String theaterLocation;
     private Integer theaterCapacity;

@@ -39,9 +39,14 @@ public class ShowServiceImpl implements ShowService {
 
     @Override
     public Show createShow(ShowDTO showDTO) {
+
+        log.info("Creating show with details: {}", showDTO);
+
         Movie movie = movieRepository.findById(showDTO.getMovieId()).orElseThrow(() -> new MovieException("Movie not found with id: " + showDTO.getMovieId()));
         Theater theater = theaterRepository.findById(showDTO.getTheaterId()).orElseThrow(() -> new TheaterException("Theater not found with id: " + showDTO.getTheaterId()));
 
+        log.info("movie with details: {}", movie);
+        log.info("theater with details: {}", theater);
         Show show = Show.builder()
                 .showTime(showDTO.getShowTime())
                 .price(showDTO.getPrice())

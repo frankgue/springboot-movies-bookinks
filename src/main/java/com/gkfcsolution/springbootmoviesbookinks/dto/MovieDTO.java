@@ -25,7 +25,6 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class MovieDTO {
-    private Long id;
     private String name;
     private String description;
     private String genre;

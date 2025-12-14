@@ -23,7 +23,6 @@ public class ShowMapper {
 
     public static ShowDTO toShowDTO(Show show){
         return ShowDTO.builder()
-                .id(show.getId())
                 .price(show.getPrice())
                 .showTime(show.getShowTime())
                 .movieId(show.getMovie().getId())

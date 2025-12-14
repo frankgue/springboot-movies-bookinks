@@ -113,6 +113,11 @@ public class BookingServiceImpl implements BookingService {
         return null;
     }
 
+    @Override
+    public List<Booking> getAllBookings() {
+        return bookingRepository.findAll();
+    }
+
     private boolean isSeatsAvailable(Long showId, Integer numberOfSeats) {
         Show show = showRepository.findById(showId).orElseThrow(() -> new ShowException("Show Not Found !"));
 

@@ -16,7 +16,6 @@ public class MovieMapper {
 
     public static Movie toMovie(MovieDTO movieDTO){
         return Movie.builder()
-                .id(movieDTO.getId())
                 .name(movieDTO.getName())
                 .description(movieDTO.getDescription())
                 .genre(movieDTO.getGenre())
@@ -28,7 +27,6 @@ public class MovieMapper {
 
     public static MovieDTO toMovieDTO(Movie movie){
         return MovieDTO.builder()
-                .id(movie.getId())
                 .name(movie.getName())
                 .description(movie.getDescription())
                 .genre(movie.getGenre())

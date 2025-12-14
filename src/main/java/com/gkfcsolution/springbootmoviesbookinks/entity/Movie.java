@@ -1,5 +1,6 @@
 package com.gkfcsolution.springbootmoviesbookinks.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,5 +37,6 @@ public class Movie {
     private String language;
 
     @OneToMany(mappedBy = "movie", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Show> shows = new ArrayList<>();
 }

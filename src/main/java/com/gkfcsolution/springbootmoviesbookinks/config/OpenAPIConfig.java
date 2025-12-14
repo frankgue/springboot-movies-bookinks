@@ -26,7 +26,7 @@ public class OpenAPIConfig {
     public OpenAPI myApi() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Microservices API")
+                        .title("Movies Booking APP GKFCSOLUTION REST API")
                         .description("Documentation des API Spring Boot")
                         .version("1.0.0")
                         .contact(new Contact()

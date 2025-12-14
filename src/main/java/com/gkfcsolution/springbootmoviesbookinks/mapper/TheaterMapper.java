@@ -16,7 +16,6 @@ public class TheaterMapper {
 
     public static Theater toTheater(TheaterDTO theaterDTO){
         return Theater.builder()
-                .id(theaterDTO.getId())
                 .theaterName(theaterDTO.getTheaterName())
                 .theaterCapacity(theaterDTO.getTheaterCapacity())
                 .theaterLocation(theaterDTO.getTheaterLocation())
@@ -26,7 +25,6 @@ public class TheaterMapper {
 
     public static TheaterDTO toTheaterDTO(Theater theater){
         return TheaterDTO.builder()
-                .id(theater.getId())
                 .theaterCapacity(theater.getTheaterCapacity())
                 .theaterLocation(theater.getTheaterLocation())
                 .theaterName(theater.getTheaterName())
